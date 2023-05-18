@@ -10,6 +10,17 @@ describe('ContentComponent', () => {
       declarations: [ContentComponent]
     })
     .compileComponents();
+    it('ngOnInit - Should call carregarNotificacoes method with success', () => {
+  // Arrange
+  spyOn(component, 'carregarNotificacoes');
+
+  // Act
+  component.ngOnInit();
+
+  // Assert
+  expect(component.carregarNotificacoes).toHaveBeenCalled();
+});
+
   });
 
   beforeEach(() => {
