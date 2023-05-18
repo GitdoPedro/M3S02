@@ -43,6 +43,18 @@ describe('ContentComponent', () => {
   expect(component.carregarNotificacoes).toHaveBeenCalled();
 });
 
+    it('carregarNotificacoes - Should return values to listaDeNotificacoes with success', () => {
+  // Arrange
+  const mockNotificacoes = [ /* Array de notificações mockadas */ ];
+  spyOn(service, 'getNotificacoes').and.returnValue(of(mockNotificacoes));
+
+  // Act
+  component.carregarNotificacoes();
+
+  // Assert
+  expect(component.listaDeNotificacoes).toEqual(mockNotificacoes);
+});
+
 
 
   });
