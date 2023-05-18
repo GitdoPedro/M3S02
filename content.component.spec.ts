@@ -31,6 +31,18 @@ describe('ContentComponent', () => {
   // Assert
   expect(component.atualizarLista).toHaveBeenCalled();
 });
+    
+    it('atualizarLista - Should call carregarNotificacoes method with success', () => {
+  // Arrange
+  spyOn(component, 'carregarNotificacoes');
+
+  // Act
+  component.atualizarLista();
+
+  // Assert
+  expect(component.carregarNotificacoes).toHaveBeenCalled();
+});
+
 
 
   });
