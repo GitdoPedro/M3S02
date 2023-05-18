@@ -20,6 +20,18 @@ describe('ContentComponent', () => {
   // Assert
   expect(component.carregarNotificacoes).toHaveBeenCalled();
 });
+    
+    it('lerNotificacao - Should call atualizarLista method with success', () => {
+  // Arrange
+  spyOn(component, 'atualizarLista');
+
+  // Act
+  component.lerNotificacao();
+
+  // Assert
+  expect(component.atualizarLista).toHaveBeenCalled();
+});
+
 
   });
 
